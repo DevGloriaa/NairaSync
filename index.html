@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NairaSync | Live Market Tracker</title>
+    <meta name="description" content="Track live cryptocurrency prices in Nigerian Naira. Convert NGN to BTC, ETH, USDT instantly with real-time market data from Quidax.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#" class="brand-name">NairaSync</a>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#converter">Converter</a>
+                <a href="#markets">Markets</a>
+            </div>
+        </div>
+    </nav>
+
+  
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Live Market Data
+                </div>
+                <h1>Track Crypto Prices in <span class="gradient-text">Nigerian Naira</span></h1>
+                <p class="hero-subtitle">Get real-time cryptocurrency prices and convert NGN to BTC, ETH, and USDT instantly. Powered by Quidax market data.</p>
+                <div class="hero-cta">
+                    <a href="#converter" class="btn btn-primary">Start Converting</a>
+                    <a href="#markets" class="btn btn-secondary">View Markets</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="mini-icon">₿</div>
+                    <span>Bitcoin</span>
+                    <div class="mini-price" id="heroBtcPrice">Loading...</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="mini-icon">Ξ</div>
+                    <span>Ethereum</span>
+                    <div class="mini-price" id="heroEthPrice">Loading...</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="mini-icon">₮</div>
+                    <span>Tether</span>
+                    <div class="mini-price" id="heroUsdtPrice">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Live Updates</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">3+</div>
+                <div class="stat-label">Cryptocurrencies</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">NGN</div>
+                <div class="stat-label">Local Currency</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">0%</div>
+                <div class="stat-label">Conversion Fee</div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why Use Our Dashboard?</h2>
+                <p>Everything you need to track and convert cryptocurrency in Nigeria</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Prices</h3>
+                    <p>Get instant access to live cryptocurrency prices updated directly from Quidax exchange.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>NGN Conversion</h3>
+                    <p>Convert between Nigerian Naira and popular cryptocurrencies with accurate market rates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <path d="M3 9h18M9 21V9"></path>
+                        </svg>
+                    </div>
+                    <h3>Clean Interface</h3>
+                    <p>Simple, intuitive design that makes tracking crypto prices effortless for everyone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Reliable Data</h3>
+                    <p>Powered by Quidax, Nigeria's trusted cryptocurrency exchange platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="markets" id="markets">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Live Market Prices</h2>
+                <p>Current cryptocurrency prices in Nigerian Naira</p>
+            </div>
+            <div class="market-grid" id="marketGrid">
+                <div class="market-card skeleton">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-price"></div>
+                </div>
+                <div class="market-card skeleton">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-price"></div>
+                </div>
+                <div class="market-card skeleton">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-price"></div>
+                </div>
+            </div>
+            <div class="market-actions">
+                <button class="btn btn-outline" id="refreshBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                        <path d="M23 4v6h-6M1 20v-6h6"></path>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                    Refresh Prices
+                </button>
+                <span class="last-updated" id="lastUpdated">Last updated: --</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="converter" id="converter">
+        <div class="section-container">
+            <div class="converter-wrapper">
+                <div class="converter-info">
+                    <h2>NGN to Crypto Converter</h2>
+                    <p>Enter an amount in Nigerian Naira to see the equivalent in cryptocurrency. Rates are updated in real-time from Quidax exchange.</p>
+                    <div class="converter-features">
+                        <div class="converter-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Instant calculation</span>
+                        </div>
+                        <div class="converter-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Live market rates</span>
+                        </div>
+                        <div class="converter-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>8 decimal precision</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-card">
+                    <div class="converter-header">
+                        <!-- <img src="quidax_logo.png" alt="Quidax" class="converter-logo"> -->
+                        <span class="converter-badge">Live Rates</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="nairaInput">Amount in Naira (NGN)</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">₦</span>
+                            <input type="number" id="nairaInput" placeholder="Enter amount" min="0">
+                        </div>
+                    </div>
+                    <div class="crypto-selector">
+                        <label>Convert to</label>
+                        <div class="crypto-options">
+                            <button class="crypto-option active" data-crypto="btc">
+                                <span class="crypto-symbol">₿</span>
+                                BTC
+                            </button>
+                            <button class="crypto-option" data-crypto="eth">
+                                <span class="crypto-symbol">Ξ</span>
+                                ETH
+                            </button>
+                            <button class="crypto-option" data-crypto="usdt">
+                                <span class="crypto-symbol">₮</span>
+                                USDT
+                            </button>
+                        </div>
+                    </div>
+                    <div class="result-box">
+                        <span class="result-label">You will receive approximately</span>
+                        <span class="result-value" id="cryptoResult">0.00000000</span>
+                        <span class="result-currency" id="resultCurrency">BTC</span>
+                    </div>
+                    <div class="rate-info">
+                        <span>Current rate:</span>
+                        <span id="currentRate">1 BTC = ₦0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="section-container">
+            <div class="cta-content">
+                <h2>Ready to Trade?</h2>
+                <p>Start buying and selling cryptocurrency on Quidax today</p>
+                <a href="https://www.quidax.com" target="_blank" rel="noopener" class="btn btn-white">
+                    Visit Quidax
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-right">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3 style="color: #3A0CA3; margin-bottom: 10px;">NairaSync</h3>
+                <p>Real-time cryptocurrency market data and conversion tools for the Nigerian market.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="#features">Features</a>
+                    <a href="#markets">Markets</a>
+                    <a href="#converter">Converter</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Data Source</h4>
+                    <a href="https://www.quidax.com" target="_blank" rel="noopener">Quidax Exchange</a>
+                    <a href="https://docs.quidax.com" target="_blank" rel="noopener">API Developers</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NairaSync.</p>
+                <p class="disclaimer">
+                    Market data powered by <a href="https://quidax.com" target="_blank" style="color: inherit; text-decoration: underline;">Quidax API</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
